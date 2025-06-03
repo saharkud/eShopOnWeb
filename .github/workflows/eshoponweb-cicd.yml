@@ -10,7 +10,6 @@ env:
   SUBSCRIPTION-ID: 212db3d5-7f41-40aa-b345-747461ba5bca
   WEBAPP-NAME: devops-webapp-eastus-620530571
 
-
 jobs:
   #Build, test and publish .net web project in repository
   buildandtest:
@@ -74,7 +73,7 @@ jobs:
     - name: Azure Login
       uses: azure/login@v2
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{secrets.AZURE_CREDENTIALS}}
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
